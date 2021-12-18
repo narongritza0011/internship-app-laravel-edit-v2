@@ -23,7 +23,7 @@ Route::get('/', ['middleware' => 'guest', function () {
 Auth::routes();
 
 
-//
+//เเบบฟอร์มหน้าสมัครฝึกงาน
 Route::get('register', [FormController::class, 'index']);
 Route::post('register/store', [FormController::class, 'store'])->name('register.save');
 
@@ -32,16 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('dashboard', 'HomeController');
     });
 
-
-
-
-
-
-
-
     Route::group(['prefix' => 'manage'], function () {
-
-
         Route::resource('customer', 'CustomersController');
         Route::get('editCus/{id}', 'CustomersController@editCus');
         Route::get('delCus/{id}', 'CustomersController@delCus');
