@@ -33,10 +33,11 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('theme') }}/files/assets/css/style.css">
     <style>
-    .login-block {
-        background:url(images/bg.jpg) no-repeat;
-        background-size: cover;
-    }
+        .login-block {
+            background: url('') no-repeat;
+            background-size: cover;
+            background-color: #191919;
+        }
     </style>
 </head>
 
@@ -45,63 +46,89 @@
     <div class="theme-loader">
         <div class="ball-scale">
             <div class='contain'>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
-                <div class="ring"><div class="frame"></div></div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Pre-loader end -->
 
-    <section class="login-block">
+    <section class="login-block ">
         <!-- Container-fluid starts -->
-        <div class="container">
+        <div class="container ">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 ">
                     <!-- Authentication card start -->
 
-                        <form class="md-float-material form-material" method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <div class="text-center">
-                                {{-- <img src="{{ asset('images/logo150.png') }}" class="img-fluid"> --}}
-                            </div>
-                            <div class="auth-box card shadow">
-                                <div class="card-block">
-                                    <div class="row m-b-20">
-                                        <div class="col-md-12 text-center">
-                                        </div>
+                    <form class="md-float-material form-material" method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="text-center">
+                            {{-- <img src="{{ asset('images/logo150.png') }}" class="img-fluid"> --}}
+                        </div>
+                        <div class="auth-box card shadow">
+                            <img src="https://www.img.in.th/images/c94ad497486fc9ed08b5c9a481f2dc78.png" class="img-fluid">
+                            <div class="card-block">
+                                <div class="row m-b-20">
+                                    <div class="col-md-12 text-center">
+                                        <h3>ระบบจัดการนักศึกษาฝึกงาน</h3>
                                     </div>
-                                    <div class="form-group form-primary">
-                                        {{-- <input type="text" name="email" class="form-control" required="" placeholder="Your Email Address"> --}}
-                                        <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Username">
-                                        @error('username')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                        <span class="form-bar"></span>
-                                    </div>
-                                    <div class="form-group form-primary">
-                                        {{-- <input type="password" name="password" class="form-control" required="" placeholder="Password"> --}}
+                                </div>
+                                <div class="form-group form-primary">
+                                  
+                        <label for="exampleFormControlTextarea1" class="form-label">บัญชีผู้ใช้</label>
 
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+                                    {{-- <input type="text" name="email" class="form-control" required="" placeholder="Your Email Address"> --}}
+                                    <input id="username" type="username" class="form-control  @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Username">
+                                    @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                    <span class="form-bar"></span>
+                                </div>
+                                <div class="form-group form-primary">
+                                    {{-- <input type="password" name="password" class="form-control" required="" placeholder="Password"> --}}
+                                    <label for="exampleFormControlTextarea1" class="form-label">รหัสผ่าน</label>
+                
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
 
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                        <span class="form-bar"></span>
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                    <span class="form-bar"></span>
 
-                                    </div>
-                                    {{-- <div class="row m-t-25 text-left">
+                                </div>
+                                {{-- <div class="row m-t-25 text-left">
                                         <div class="col-12">
                                             <div class="checkbox-fade fade-in-primary d-">
                                                 <label>
@@ -115,23 +142,23 @@
                                             </div>
                                         </div>
                                     </div> --}}
-                                    <div class="row m-t-30">
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn btn-sm btn-dark btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('Login') }}</button>
-                                            {{-- <a href="/dashboard" class="btn btn-sm btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('Sign In') }}</a> --}}
-                                        </div>
-
-                                        {{-- <div class="col-md-12">
-                                            <button type="button" onclick="openWindow()" class="btn btn-sm btn-default btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('เปิดโปรแกรม') }}</button>
-                                            <button type="button" onclick="closeWindow()" class="btn btn-sm btn-default btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('ปิดโปรแกรม') }}</button> --}}
-
-                                            {{-- <a href="/dashboard" class="btn btn-sm btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('Sign In') }}</a> --}}
-                                        {{-- </div>  --}}
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-success btn-md btn-block waves-effect waves-light text-center m-b-20 rounded">{{ __('เข้าสู่ระบบ') }}</button>
+                                        {{-- <a href="/dashboard" class="btn btn-sm btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('Sign In') }}</a> --}}
                                     </div>
+
+                                    {{-- <div class="col-md-12">
+                                            <button type="button" onclick="openWindow()" class="btn btn-sm btn-default btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('เปิดโปรแกรม') }}</button>
+                                    <button type="button" onclick="closeWindow()" class="btn btn-sm btn-default btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('ปิดโปรแกรม') }}</button> --}}
+
+                                    {{-- <a href="/dashboard" class="btn btn-sm btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">{{ __('Sign In') }}</a> --}}
+                                    {{-- </div>  --}}
                                 </div>
                             </div>
-                        </form>
-                        <!-- end of form -->
+                        </div>
+                    </form>
+                    <!-- end of form -->
                 </div>
                 <!-- end of col-sm-12 -->
             </div>
@@ -161,13 +188,12 @@
     <script type="text/javascript" src="{{ asset('theme') }}/files/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
     <script type="text/javascript" src="{{ asset('theme') }}/files/assets/js/common-pages.js"></script>
     <script>
-
         // function openWindow(){
         //     window.open('http://127.0.0.1:8000/',"_blank", "toolbar=yes,scrollbars=yes,resizable=yes");
         // }
         // function closeWindow()
         // {
-            
+
         //     window.close();
         // }
     </script>

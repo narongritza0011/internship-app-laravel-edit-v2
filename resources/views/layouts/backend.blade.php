@@ -251,7 +251,7 @@
             <div class="pcoded-wrapper">
                 <nav class="pcoded-navbar">
                     <div class="pcoded-inner-navbar main-menu">
-                        <div class="pcoded-navigatio-lavel">Menu</div>
+                        <div class="pcoded-navigatio-lavel">เมนู</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <!-- start menu -->
 

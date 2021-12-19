@@ -26,8 +26,8 @@
                                             <th class="text-center"></th>
                                             <th class="text-center">Name</th>
                                             <th class="text-center">Phone Number</th>
-                                            <th class="text-center"></th>
-                                            <th class="text-center"></th>
+                                            <th class="text-center">เเก้ไข</th>
+                                            <th class="text-center">ลบ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -80,7 +80,6 @@
 @endsection
 @section('script')
 <script>
-   
     var route_index = "{{ route('customer.index') }}"
     var route_store = "{{ route('customer.store') }}"
     $(function() {
@@ -142,7 +141,7 @@
                 },
                 error: function(err) {
 
-                    show_error('error ค้าบบบ');
+                    show_error('error');
                     console.log(err.responseText);
                 }
             });

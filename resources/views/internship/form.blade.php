@@ -66,9 +66,23 @@
         <h1 class="text-primary mt-5">
             สมัครฝึกงาน TRAKOOL SOFTWARE COMPANY ONLINE
         </h1>
+        @if(session("success"))
+        <div class="alert alert-success">{{session('success')}}</div>
+        @endif
     </div>
     <div class="container mt-5 mb-5">
+        @foreach($member_intern as $row)
+        <h1>
+            <th>{{$row->name}}</th>
 
+            <th>{{$row->name}}</th>
+            <td><img src="{{asset($row->profile)}}" width="100px" height="100px" alt=""></td>
+            <td>{{$row->full_name}}</td>
+            <iframe src="{{asset($row->resume)}}" frameborder="0"></iframe>
+            <iframe src="{{asset($row->transcript)}}" frameborder="0"></iframe>
+
+        </h1>
+        @endforeach
 
     </div>
     <form action="{{route('register.save')}}" method="post" id="registration" name="registration" enctype="multipart/form-data">

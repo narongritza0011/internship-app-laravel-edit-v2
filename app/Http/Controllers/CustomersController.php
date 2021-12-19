@@ -58,7 +58,7 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
-         dd('test');
+        //  dd($request->all());
         if ($request->id) {
 
             $data = Customers::find($request->id);
@@ -72,7 +72,7 @@ class CustomersController extends Controller
 
         $json['success'] = true;
         $json['message'] = '';
-         return response()->json($json);
+        // return response()->json($json);
         return $json;
     }
 

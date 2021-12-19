@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '095d7ec5369d8bda82dc810618c68f5bc160b4a1',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -479,12 +479,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '095d7ec5369d8bda82dc810618c68f5bc160b4a1',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -626,12 +626,12 @@
             'dev_requirement' => true,
         ),
         'phenx/php-font-lib' => array(
-            'pretty_version' => '0.5.2',
-            'version' => '0.5.2.0',
+            'pretty_version' => '0.5.4',
+            'version' => '0.5.4.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phenx/php-font-lib',
             'aliases' => array(),
-            'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
+            'reference' => 'dd448ad1ce34c63d09baccd05415e361300c35b4',
             'dev_requirement' => false,
         ),
         'phenx/php-svg-lib' => array(

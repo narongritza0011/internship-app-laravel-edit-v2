@@ -27,6 +27,9 @@ Auth::routes();
 Route::get('register', [FormController::class, 'index']);
 Route::post('register/store', [FormController::class, 'store'])->name('register.save');
 
+
+
+//หน้าผู้ดูเเลระบบ
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'home'], function () {
         Route::resource('dashboard', 'HomeController');
